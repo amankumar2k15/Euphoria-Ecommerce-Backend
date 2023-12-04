@@ -15,7 +15,7 @@ const validate = (validations) => {
       tmp.push(error.param);
       return true;
     });
-      
+
 
     if (errors.isEmpty()) {
       return next();

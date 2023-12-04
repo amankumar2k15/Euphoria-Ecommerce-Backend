@@ -33,17 +33,17 @@ const productSchema = Schema({
         required: true
     },
     price: {
-        type: Array,
+        type: String,
         required: true
     },
-    Avatar: {
-        type: Array,
-        required: false
+    avatar: {
+        type: [],
     },
     rating: {
         type: Number,
-        default: 0
+        default: 0 
     },
+
 
 }, { timestamps: true });
 
@@ -52,6 +52,6 @@ productSchema.index({ title: 'text' });
 
 const ProductModel = mongoose.model('ProductModel', productSchema);
 
-ProductModel.createIndexes();
+// ProductModel.createIndexes();
 
 module.exports = ProductModel;
